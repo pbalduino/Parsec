@@ -1,4 +1,4 @@
-class TicketController < ApplicationController
+class TicketController < ProtectedController
   def index
   end
 
