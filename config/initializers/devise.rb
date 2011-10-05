@@ -69,7 +69,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "e6dc96e88d5488eeffe4ee43d13fd04c24233bdafd029eb45bb21f48113d6b0083b27ace7932307d898b0a8469b641dd5b2baa6326f678c84e09c2a351d64fe1"
+  config.pepper = "e6dc96e88d5488eeffe4ee43d13fd04c24233bdafd029eb45bb21f48113d6b0083b27ace7932307d898b0a8469b641dd5b2baa6326f678c84e09c2a351d64fe1"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -102,7 +102,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length. Default is 6..128.
-  # config.password_length = 6..128
+  config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # an one (and only one) @ exists in the given string. This is mainly
@@ -153,7 +153,7 @@ Devise.setup do |config|
   # :authlogic_sha512 (then you should set stretches above to 20 for default behavior)
   # and :restful_authentication_sha1 (then you should set stretches to 10, and copy
   # REST_AUTH_SITE_KEY to pepper)
-  # config.encryptor = :sha512
+  config.encryptor = :sha512
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key

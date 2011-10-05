@@ -1,0 +1,21 @@
+%h2='Meus tickets'
+-if @tickets.empty?
+  Você não tem tickets cadastrados
+-else
+  %table.list
+    %thead
+      %tr
+        %th='Data'
+        %th='Descrição'
+        %th='Situação'
+    %tbody
+      - @tickets.each do |ticket|
+        %tr
+          %td
+            =ticket.created_at
+          %td
+            =ticket.description
+          %td
+            =ticket.status
+
+%h2='Cadastrar tickets'
