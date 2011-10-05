@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 gem 'heroku'
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'
