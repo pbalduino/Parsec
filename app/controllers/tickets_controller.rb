@@ -1,7 +1,6 @@
 class TicketsController < ProtectedController
   def index
-    puts '------------->', current_user.to_json
-    @tickets = Ticket.where('user_id = ?', 1).order('created_at')
+    @tickets = Ticket.where('user_id = ?', current_user.id).order('created_at')
   end
 
   def new
