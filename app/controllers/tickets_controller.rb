@@ -1,6 +1,7 @@
 class TicketsController < ProtectedController
   def index
-    @tickets = Ticket.find(:all, :order => 'created_at')
+    puts '------------->', current_user.to_json
+    @tickets = Ticket.where('user_id = ?', 1).order('created_at')
   end
 
   def new

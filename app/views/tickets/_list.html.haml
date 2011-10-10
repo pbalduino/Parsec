@@ -12,7 +12,7 @@
       - @tickets.each do |ticket|
         %tr
           %td{:width => 15}
-            =ticket.created_at.strftime '%d/%m/%Y'
+            ="#{ticket.created_at.strftime('%d/%m/%Y') if ticket.created_at}"
           %td
             =ticket.description
           %td{:width => 120}
