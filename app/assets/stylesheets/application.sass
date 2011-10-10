@@ -1,8 +1,8 @@
-$bgcolor: #fbfbfb
+$bgcolor: #eee
 $color:   #333
 
 body
-  font-family: helvetica, tahoma, 'sans serif'  
+  font-family: helvetica, tahoma, 'sans serif'
   text-shadow: 1px 1px white
   color:       $color
 
@@ -28,7 +28,52 @@ table.list
       border-radius:  0.3em 0 0 0
       padding: 0.2em
 
-  tbody 
+  tbody
     td
       background-color: darken($bgcolor, 3%)
       padding: 0.2em
+
+#new_ticket
+  margin-top:       2em
+
+a.pretty-button
+  background: #dfdfdf url(http://energy.pftech.com.br/images/button_background.png)
+  text-decoration: none
+  color: $color
+  margin: 0
+  padding: .5em 1em
+  cursor: pointer
+  display: inline
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3)
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3)
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3)
+  -khtml-box-shadow: 0 1px 2px rgba(0,0,0,0.3)
+  font-weight: bold
+  -moz-border-radius-topleft: 3em
+  -webkit-border-top-left-radius: 3em
+  -khtml-border-top-left-radius: 3em
+  border-top-left-radius: 3em
+  -moz-border-radius-bottomleft: 3em
+  -webkit-border-bottom-left-radius: 3em
+  -khtml-border-bottom-left-radius: 3em
+  border-bottom-left-radius: 3em
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  -moz-border-radius-topright: 3em
+  -webkit-border-top-right-radius: 3em
+  -khtml-border-top-right-radius: 3em
+  border-top-right-radius: 3em
+  -moz-border-radius-bottomright: 3em
+  -webkit-border-bottom-right-radius: 3em
+  -khtml-border-bottom-right-radius: 3em
+  border-bottom-right-radius: 3em
+
+a.pretty-button:hover
+  color: #00B0FF
+  text-decoration: underline
+  background-color: #EFEFEF
+
+a.pretty-button:active
+  background-color: #2866CC
+  background-image: url(http://energy.pftech.com.br/images/button_background_inverted.png)
+  color: white
+

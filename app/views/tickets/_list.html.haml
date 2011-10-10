@@ -1,0 +1,20 @@
+%h2='Meus tickets'
+-if @tickets.empty?
+  Você ainda não tem tickets cadastrados
+-else
+  %table.list
+    %thead
+      %tr
+        %th='Data'
+        %th='Descrição'
+        %th='Situação'
+    %tbody
+      - @tickets.each do |ticket|
+        %tr
+          %td{:width => 15}
+            =ticket.created_at.strftime '%d/%m/%Y'
+          %td
+            =ticket.description
+          %td{:width => 120}
+            =Ticket::Status[ticket.status - 1][0]
+
