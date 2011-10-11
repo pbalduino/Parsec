@@ -29,9 +29,16 @@ table.list
       padding: 0.2em
 
   tbody
+    td:hover
+      background-color: darken($bgcolor, 6%)
+
     td
       background-color: darken($bgcolor, 3%)
       padding: 0.2em
+
+      a
+        text-decoration: none
+        color: $color
 
 #new_ticket
   margin-top:       2em
@@ -68,3 +75,4 @@ a.pretty-button:active
 #tickets label
   width: 100px
   float: left
+

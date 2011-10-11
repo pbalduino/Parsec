@@ -1,17 +1,15 @@
-%h2 Sign up
+%h2 Cadastrar usuário
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password
-  %div
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %div= f.submit "Sign up"
+  %p
+    = f.label :email, 'Login: '
+    = f.email_field :email, :placeholder => 'informe um email válido', :maxlength => 50, :size => 50
+  %p
+    = f.label :password, 'Senha: '
+    = f.password_field :password, :placeholder => 'com mais de seis caracteres', :maxlength => 30, :size => 30
+  %p
+    = f.label :password_confirmation, 'Confirme a senha: '
+    = f.password_field :password_confirmation, :placeholder => 'repita sua senha', :maxlength => 30, :size => 30
+  %p= f.submit "Cadastrar"
 = render :partial => "devise/shared/links"
+

@@ -12,9 +12,9 @@
       - @tickets.each do |ticket|
         %tr
           %td{:width => 15}
-            ="#{ticket.created_at.strftime('%d/%m/%Y') if ticket.created_at}"
+            =link_to "#{ticket.created_at.strftime('%d/%m/%Y') if ticket.created_at}", ticket
           %td
-            =ticket.description
+            =link_to ticket.description, ticket
           %td{:width => 120}
-            =Ticket::Status[ticket.status - 1][0]
+            =link_to Ticket::Status[ticket.status - 1][0], ticket
 

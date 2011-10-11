@@ -1,0 +1,7 @@
+%h2 Visualizar ticket
+
+- if @ticket
+  = render :partial => 'view_ticket', :locals => {:ticket => @ticket}
+- else
+  Ticket não encontrado
+

@@ -2,4 +2,6 @@
   =render :partial => 'list'
 #new_ticket
   =link_to 'Cadastrar novo ticket', new_ticket_url, :class => 'pretty-button'
+%p
+  =link_to 'Sair', destroy_user_session_url
 
