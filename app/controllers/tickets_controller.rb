@@ -16,7 +16,10 @@ class TicketsController < ProtectedController
     flash[:notice] = 'Ticket incluido'
 
     redirect_to root_url
+  end
 
+  def show
+    @ticket = Ticket.where('id = ? and user_id = ?', params[:id], current_user.id).first
   end
 
 end

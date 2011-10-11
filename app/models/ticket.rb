@@ -1,4 +1,7 @@
 class Ticket < ActiveRecord::Base
+  belongs_to :user
+  has_many :comments
+
   Status = [['Aberto', 1],
             ['Em andamento', 2],
             ['Fechado', 3]]

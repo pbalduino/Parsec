@@ -1,0 +1,22 @@
+%p
+  %label='Data: '
+  %b=ticket.created_at
+%p
+  %label='Responsável: '
+  %b=ticket.user.email
+%p
+  %label='Status: '
+  %b=Ticket::Status[ticket.status - 0][0]
+%p
+  Histórico:
+  %ul
+    -ticket.comments.each do |comment|
+      %li
+        %b=comment.created_at.strftime('%d/%m/%Y %H:%M:%S')
+        %br
+        =comment.comment
+%p
+  =link_to 'Voltar', tickets_url
+  =' | '
+  =link_to 'Sair', destroy_user_session_url
+

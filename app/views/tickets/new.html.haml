@@ -14,4 +14,8 @@
     =text_area_tag :comment, 'whatever', :size => '24x6'
   %p
     =form.submit 'Gravar'
+%p
+  =link_to 'Voltar', tickets_url
+  =' | '
+  =link_to 'Sair', destroy_user_session_url
 
