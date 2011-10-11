@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Comment do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "must have a comment" do
+    lambda{Comment.create!}.should raise_error
+  end
 end

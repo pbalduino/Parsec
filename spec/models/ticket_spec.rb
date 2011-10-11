@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Ticket do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "must have an user" do
+    lambda{Ticket.create!}.should raise_error
+  end
 end
 

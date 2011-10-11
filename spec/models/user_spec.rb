@@ -18,5 +18,7 @@ describe User do
     lambda {User.create!(:email => 'test@test.com', :password => '123456', :password_confirmation => 'whatever')}.should raise_error ActiveRecord::RecordInvalid
   end
 
+  it "Cannot add user without password" do
+    lambda {User.create!(:email => 'test@test.com')}.should raise_error ActiveRecord::RecordInvalid
+  end
 end
-
