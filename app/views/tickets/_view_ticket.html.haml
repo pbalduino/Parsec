@@ -10,7 +10,7 @@
 %p
   Histórico:
   %ul
-    -@comments.each do |comment|
+    -ticket.comments.each do |comment|
       %li
         %b=comment.created_at.strftime('%d/%m/%Y %H:%M:%S')
         %br

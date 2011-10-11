@@ -9,6 +9,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec', '~> 2.4'
   gem 'rspec-rails', '~> 2.4'
+  gem 'ZenTest'
+  gem 'autotest-rails'
+  gem 'test_notifier'
 end
 
 group :production do
@@ -42,3 +45,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
